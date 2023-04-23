@@ -15,6 +15,8 @@ jobs:
     steps:
       - checkout
       - run: yarn install
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y libnss3
       - run: yarn cypress:open
 
 # Invoke jobs via workflows
